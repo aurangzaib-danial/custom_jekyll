@@ -1,3 +1,7 @@
 #!/usr/bin/env ruby
 
 require "custom_jekyll"
+
+site_name = ARGV.first
+
+CustomJekyll::CommandLineController.new.generate(site_name)

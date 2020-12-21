@@ -1,0 +1,3 @@
+SITE_STRUCTURE = {
+  root: 
+}

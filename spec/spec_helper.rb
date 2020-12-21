@@ -1,5 +1,6 @@
 require "bundler/setup"
 require "custom_jekyll"
+require "pry"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
@@ -11,4 +12,7 @@ RSpec.configure do |config|
   config.expect_with :rspec do |c|
     c.syntax = :expect
   end
+
+  # Clean test files
+  system("rm -rf tmp/*")
 end

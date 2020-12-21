@@ -14,5 +14,5 @@ Custom jekyll is a gem that will generate files that I require to start any kind
 
 
 TODO
-- [ ] bundle a gem
-- [ ] define most important features
+- [x] bundle a gem
+- [x] define most important features
