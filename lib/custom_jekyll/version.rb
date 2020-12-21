@@ -1,0 +1,3 @@
+module CustomJekyll
+  VERSION = "0.1.0"
+end
