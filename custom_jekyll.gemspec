@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Aurangzaib"]
   spec.email         = ["aurangzaib.danial@gmail.com"]
 
-  spec.summary       = "Need summary"
-  spec.description   = "Need description"
+  spec.summary       = "Generate using CustomJekyll and have the basic structure for creating any kind of static website and then hosting it on GithubPages."
+  spec.description   = "The purpose of this gem is to make one's life easy while making any kind of site with jekyll. This gem is a mere generator that will generate all the files required for you to start any kind of static website using jekyll. Jekyll default generator is focused for blogs. I love to make different static websites and hosting them using github pages. "
   spec.homepage      = "https://github.com/aurangzaib-danial/custom_jekyll"
   spec.license       = "MIT"
 

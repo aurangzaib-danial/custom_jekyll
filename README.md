@@ -1,29 +1,24 @@
 # CustomJekyll
+The purpose of this gem is to make one's life easy while making any kind of site with jekyll. This gem is a mere generator that will generate all the files required for you to start any kind of static website using jekyll. Jekyll default generator is focused for blogs. I love to make different static websites and hosting them using github pages. 
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/custom_jekyll`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
-
-## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'custom_jekyll'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install custom_jekyll
+Generate using CustomJekyll and have the basic structure for creating any kind of static website and then hosting it on GithubPages.
+    
 
 ## Usage
+### Install
+```shell
+$ gem install custom_jekyll
+```
+### Generate a site
+```shell
+$ custom_jekyll static-is-fun-with-jekyll
+```
+### if you do not like the name custom_jekyll (I totally understand :P)
+Add the following in your shell's profile
 
-TODO: Write usage instructions here
-
+```shell
+alias cj="custom_jekyll"
+```
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
@@ -40,4 +35,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the CustomJekyll project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/custom_jekyll/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the CustomJekyll project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/aurangzaib-danial/custom_jekyll/blob/master/CODE_OF_CONDUCT.md).
