@@ -22,6 +22,7 @@ class CustomJekyll::Generator
     copy_templates_to_new_site
     change_directory_to_site
     run_automated_commands
+    add_site_name_to_site_config
   end
 
   def g_site_folder
