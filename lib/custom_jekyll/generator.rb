@@ -20,6 +20,7 @@ class CustomJekyll::Generator
 
   def generate_site
     copy_templates_to_new_site
+    change_directory_to_site
     run_automated_commands
   end
 
@@ -32,19 +33,24 @@ class CustomJekyll::Generator
   end
 
   def run_automated_commands
-    change_directory_to_site
     run_bundle_install
     make_git_repo
+  end
+
+  def add_site_name_to_site_config
+    config = File.read('_config.yml')
+    config.gsub!('%site_title%', humanize_site_name)
+    overwrite_config(config)
+  end
+
+  def change_directory_to_site
+    Dir.chdir(site_name)
   end
 
   private
   
   def site_template
     self.class.path_to_site_template << '/.'
-  end
-
-  def change_directory_to_site
-    Dir.chdir(site_name)
   end
 
   def run_bundle_install
@@ -55,6 +61,16 @@ class CustomJekyll::Generator
 
   def make_git_repo
     system("git init")
+  end
+
+  def humanize_site_name
+    site_name.split(/-|\s/).map {|w| w.capitalize}.join("\s")
+  end
+
+  def overwrite_config(content)
+    File.open '_config.yml', 'w' do |f|
+      f.write content
+    end
   end
   
 end

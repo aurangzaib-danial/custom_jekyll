@@ -1,4 +1,4 @@
-title: 'TODO: Add awesome title'
+title: %site_title%
 defaults:
   -
     scope:

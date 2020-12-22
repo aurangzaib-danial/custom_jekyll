@@ -1,9 +1,10 @@
 Dir.mkdir('tmp') unless File.exists?('tmp')
-Dir.chdir('tmp')
+TMP_DIR = File.expand_path('tmp')
 
 RSpec.describe CustomJekyll::Generator do
   
   before(:each) do
+    Dir.chdir(TMP_DIR)
     system("rm -rf ./*")
   end
 
@@ -30,10 +31,18 @@ RSpec.describe CustomJekyll::Generator do
     expect(File).to exist('test-site/assets/css/styles.scss') # deep
   end
 
-  xit '#run_automated_commands at least runs bundle install' do
+  it '#run_automated_commands at least runs bundle install' do
     subject.copy_templates_to_new_site
-    subject.run_automated_commands # changes directory to site
+    subject.change_directory_to_site
+    subject.run_automated_commands
     expect(File).to exist('Gemfile.lock')
+  end
+
+  it '#add_site_name_to_site_config' do
+    subject.copy_templates_to_new_site
+    subject.change_directory_to_site
+    subject.add_site_name_to_site_config
+    expect(File.read('_config.yml')).to include('Test Site')
   end
   
 end
