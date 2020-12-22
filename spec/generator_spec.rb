@@ -23,10 +23,16 @@ RSpec.describe CustomJekyll::Generator do
   end
 
   it "#copy_templates_to_new_site copies all the files in site_template of gem's lib folder to the new site directory" do
-    subject.generate_site
+    subject.copy_templates_to_new_site
     # two expectations are enough for checking if the files were copied.
     expect(File).to exist('test-site/.gitignore') # simple
     expect(File).to exist('test-site/assets/css/styles.scss') # deep
+  end
+
+  it '#run_automated_commands at least runs bundle install' do
+    subject.copy_templates_to_new_site
+    subject.run_automated_commands # changes directory to site
+    expect(File).to exist('Gemfile.lock')
   end
   
 end

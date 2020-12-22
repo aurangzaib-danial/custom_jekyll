@@ -13,5 +13,5 @@ Custom jekyll is a gem that will generate files that I require to start any kind
 4. Runs bundle install and also display gem output. 
 
 TODO
-- [ ] Set set_template according to your need.
-- [ ] Run automated commands like bundle install, initialize git repository
+- [x] Set set_template according to your need.
+- [x] Run automated commands like bundle install, initialize git repository
