@@ -4,7 +4,7 @@ class CustomJekyll::Generator
   class << self
     def path_to_resources
       $LOAD_PATH.detect do |dir|
-        dir.include?('custom_jekyll/lib')
+        dir.include?('custom_jekyll') && dir.include?('lib')
       end
     end
 
