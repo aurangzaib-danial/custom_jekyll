@@ -18,9 +18,10 @@ class CustomJekyll::Generator
    g_site_folder
   end
 
-  # def generate_site
-  #   copy_templates_to_new_site
-  # end
+  def generate_site
+    copy_templates_to_new_site
+    run_automated_commands
+  end
 
   def g_site_folder
     Dir.mkdir(site_name)
