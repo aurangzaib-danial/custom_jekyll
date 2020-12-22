@@ -13,6 +13,12 @@ $ gem install custom_jekyll
 ```shell
 $ custom_jekyll static-is-fun-with-jekyll
 ```
+then switch to it and start jekylling
+
+```shell
+$ cd static-is-fun-with-jekyll
+$ bundle exec jekyll serve
+```
 ### if you do not like the name custom_jekyll (I totally understand :P)
 Add the following in your shell's profile
 
