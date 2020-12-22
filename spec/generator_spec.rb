@@ -1,3 +1,4 @@
+Dir.mkdir('tmp') unless File.exists?('tmp')
 Dir.chdir('tmp')
 
 RSpec.describe CustomJekyll::Generator do
