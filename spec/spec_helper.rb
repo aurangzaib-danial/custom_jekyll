@@ -13,6 +13,4 @@ RSpec.configure do |config|
     c.syntax = :expect
   end
 
-  # Clean test files
-  system("rm -rf tmp/*")
 end
