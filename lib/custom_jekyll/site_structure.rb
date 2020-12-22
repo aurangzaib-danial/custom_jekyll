@@ -1,3 +1,0 @@
-SITE_STRUCTURE = {
-  root: 
-}

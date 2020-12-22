@@ -3,19 +3,18 @@ class CustomJekyll::Generator
   
   def initialize(site_name)
    @site_name = site_name 
-   generate_site
+   g_site_folder
   end
 
   def generate_site
-    site_folder
     root
   end
 
-  def site_folder
+  def g_site_folder
     Dir.mkdir(site_name)
   end
 
-  def root
+  def g_root
     
   end
   
