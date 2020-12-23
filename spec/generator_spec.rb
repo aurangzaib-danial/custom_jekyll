@@ -31,7 +31,7 @@ RSpec.describe CustomJekyll::Generator do
     expect(File).to exist('test-site/assets/css/styles.scss') # deep
   end
 
-  xit '#run_automated_commands at least runs bundle install' do
+  it '#run_automated_commands at least runs bundle install' do
     subject.copy_templates_to_new_site
     subject.change_directory_to_site
     subject.run_automated_commands
