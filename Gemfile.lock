@@ -1,7 +1,8 @@
 PATH
   remote: .
   specs:
-    custom_jekyll (0.2.2)
+    custom_jekyll (0.2.3)
+      bundler (~> 1.17)
 
 GEM
   remote: https://rubygems.org/
@@ -31,7 +32,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.17)
   custom_jekyll!
   pry (~> 0.13.1)
   rake (~> 10.0)
