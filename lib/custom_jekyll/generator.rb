@@ -56,8 +56,9 @@ class CustomJekyll::Generator
 
   def run_bundle_install
     puts "Running bundle install in #{site_name}"
-    ENV["BUNDLE_GEMFILE"] = File.expand_path('Gemfile')
-    system("bundle install")
+    Bundler.with_clean_env do
+      system("bundle install")
+    end
   end
 
   def make_git_repo
