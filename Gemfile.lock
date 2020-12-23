@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    custom_jekyll (0.2.1)
+    custom_jekyll (0.2.2)
 
 GEM
   remote: https://rubygems.org/
